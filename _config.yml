@@ -3,6 +3,7 @@ title: Universal Ramblings
 index_title: Damian Dailisan # same as title in index.html file, so that custom description can be set in page.html layout.
 blog_title: Damian Dailisan
 header-img: img/home-bg.jpg
+author: "Damian Dailisan"
 email: damian.dailisan@gmail.com
 copyright_name: damian.dailisan
 description: "A cornucopia of code used for physics classes."

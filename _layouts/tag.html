@@ -14,17 +14,17 @@ layout: page
 {% for post in site.tags[page.tag] %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h3 class="post-subtitle">            
+        <h3 class="post-subtitle">
             {{ post.title }}
         </h3>
     </a>
     <p class="post-meta">
-      Posted by 
+      Posted by
       {% if post.author %}
         {{ post.author }}
       {% else %}
-        {{ site.title }}
-      {% endif %} 
+        {{ site.author }}
+      {% endif %}
       on {{ post.date | date: "%B %-d, %Y" }}
     </p>
 </div>

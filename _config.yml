@@ -1,24 +1,24 @@
 # Site settings
-title: My Territory
+title: Universal Ramblings
 index_title: Shikher Verma # same as title in index.html file, so that custom description can be set in page.html layout.
-blog_title: My Territory
+blog_title: Universal Ramblings
 header-img: img/home-bg.jpg
-email: root@shikherverma.com
+email: damian.dailisan@gmail.com
 copyright_name: ShikherVerma
 description: "Online Territory of Shikher Verma"
 baseurl: "" #base url is for when the site is not at the root but at some subdirectory.
 url: http://shikherverma.com #only used in disque comments for now
-github_username:  shikherverma
-facebook_username:  shikherverma1
-email_username:  root@shikherverma.com
+github_username:  temetski
+facebook_username:  damian.dailisan
+email_username:  damian.dailisan@gmail.com
 # used to estimate reading time
 wpm: 180
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-port: 8888
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "*.ipynb"]
+port: 4000
 permalink: /blog/:title
 
 # jekyll-paginate

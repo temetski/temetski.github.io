@@ -1,13 +1,13 @@
 # Site settings
 title: Universal Ramblings
-index_title: Shikher Verma # same as title in index.html file, so that custom description can be set in page.html layout.
-blog_title: Universal Ramblings
+index_title: Damian Dailisan # same as title in index.html file, so that custom description can be set in page.html layout.
+blog_title: Damian Dailisan
 header-img: img/home-bg.jpg
 email: damian.dailisan@gmail.com
-copyright_name: ShikherVerma
-description: "Online Territory of Shikher Verma"
+copyright_name: damian.dailisan
+description: "A cornucopia of code used for physics classes."
 baseurl: "" #base url is for when the site is not at the root but at some subdirectory.
-url: http://shikherverma.com #only used in disque comments for now
+url: http://temetski.github.io #only used in disque comments for now
 github_username:  temetski
 facebook_username:  damian.dailisan
 email_username:  damian.dailisan@gmail.com

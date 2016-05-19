@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elementary Cellular Automata"
-tags: python
+tags: [Python, Complex Systems]
 ---
 Elementary Cellular Automata (ECA) was a toy model initially created by Von
 Neumann and later on studied extensively by Stephen Wolfram, probably since he
@@ -69,7 +69,7 @@ for i in range(1,SIZE):
         index = int(binary_dec(pattern))
         ECA[i, j] = binary_str(26)[7-index]
 
-with sns.axes_style('white'): 
+with sns.axes_style('white'):
     plt.figure(figsize=(5,5))
     plt.imshow(ECA, cmap='gray', interpolation='nearest')
 {% endhighlight %}
@@ -148,7 +148,7 @@ SIZE = 128
 
     128
     Wall time: 46.3 s
-    
+
 
 **In [7]:**
 
@@ -174,13 +174,13 @@ for i in range(256):
 **In [8]:**
 
 {% highlight python %}
-%time K_list = [K(ECA) for ECA in all_ECA] 
+%time K_list = [K(ECA) for ECA in all_ECA]
 %time H_list = [H_ave(ECA) for ECA in all_ECA]
 {% endhighlight %}
 
     Wall time: 130 ms
     Wall time: 1.46 s
-    
+
 
 **In [9]:**
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chaos in Biological Populations"
-tags: python
+tags: [Python, Complex Systems]
 ---
 ## Single species model
 Consider the non-linear equation
@@ -41,7 +41,7 @@ def population_growth(r, timesteps, N_0=1, K=1000):
         N.append(eq1(r, N[-1], K))
     return np.array(N)
 
-    
+
 timesteps = np.arange(0, 30)
 r_list = [1.8, 2.3, 2.6]
 population = [population_growth(r, timesteps) for r in r_list]
@@ -54,7 +54,7 @@ for i, r in enumerate(r_list):
     axes[i].plot(timesteps, population[i]/K)
     axes[i].locator_params(axis='y', nbins=2)
     axes[i].set_ylim((0,3))
-    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center', 
+    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center',
                  verticalalignment='top', transform = axes[i].transAxes)
 ax.set_ylabel(r"$N/K$")
 ax.set_xlabel(r"time, $t$")
@@ -89,7 +89,7 @@ for i, r in enumerate(r_list):
     axes[i].plot(timesteps, population[i]/K)
     axes[i].locator_params(axis='y', nbins=3)
     axes[i].set_ylim(0,3.8)
-    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center', 
+    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center',
                  verticalalignment='top', transform = axes[i].transAxes)
 ax.set_ylabel(r"$N/K$")
 ax.set_xlabel(r"time, $t$")
@@ -137,8 +137,8 @@ def competition_growth(r_1, r_2, timesteps, N1_0=N1_0, N2_0=N2_0, K_1=K_1, K_2=K
         if i>0:
             N[i,:] = [species1(r_1, N[i-1,0], N[i-1,1]), species2(r_2, N[i-1,0], N[i-1,1])]
     return N
- 
-    
+
+
 timesteps = np.arange(0, 30)
 r_list = [1.1, 1.5, 2.5, 4]
 population = [competition_growth(r, 2*r, timesteps)[:,0] for r in r_list]
@@ -151,7 +151,7 @@ for i, r in enumerate(r_list):
     axes[i].plot(timesteps, population[i]/K)
     axes[i].locator_params(axis='y', nbins=2)
     axes[i].set_ylim(0,np.max(population[i]/K)+0.5)
-    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center', 
+    axes[i].text(0.5, 0.99,r'$r=%.2f$' % r, horizontalalignment='center',
                  verticalalignment='top', transform = axes[i].transAxes)
 ax.set_ylabel(r"$N_1/K$")
 ax.set_xlabel(r"time, $t$")
@@ -160,4 +160,3 @@ subplotaxis_off(ax)
 
 
 ![svg]({{ BASE_PATH }}/img/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_6_0.svg)
-

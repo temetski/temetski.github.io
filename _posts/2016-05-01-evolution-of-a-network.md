@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "evolution of a  network"
+title: "Evolution of a network"
 tags: [Python, Complex Systems]
 ---
 ## Netdimes project
@@ -41,7 +41,7 @@ Note that this time period is just one year.
 
 {% highlight python %}
 size_nodes = [len(pd.read_csv('ASNodes%s_2011.csv.gz'%i, header=None)) for i in range(1,11)]
-    
+
 fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.set_xlabel("2011")

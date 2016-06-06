@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Evolution of a network"
+title: "evolution of a network"
 tags: [Python, Complex Systems]
 ---
 ## Netdimes project
 
-We want to look at the growth of Autonomous Server (AS) networks found in the
+We want to look at the growth of Autnomous Server (AS) networks found in the
 [netdimes project](http://www.netdimes.org/new/?q=node/65) to see how a network
 grows over time.
 In particular, we are looking at nodes in the year 2011.
@@ -59,7 +59,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/netdimes\evolution-of-a--network_files/evolution-of-a--network_3_1.svg)
+![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_3_1.svg)
 
 
 So it appears as if the size of the AS network id more or less decreasing
@@ -106,7 +106,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/netdimes\evolution-of-a--network_files/evolution-of-a--network_6_1.svg)
+![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_6_1.svg)
 
 
 We can zoom in at the middle part:
@@ -122,7 +122,7 @@ fig
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/netdimes\evolution-of-a--network_files/evolution-of-a--network_8_0.svg)
+![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_8_0.svg)
 
 
 
@@ -168,7 +168,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/netdimes\evolution-of-a--network_files/evolution-of-a--network_11_1.svg)
+![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_11_1.svg)
 
 
 Once again, there is a decreasing trend. Since this is a CCDF, we can say that

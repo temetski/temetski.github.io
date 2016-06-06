@@ -5,7 +5,7 @@ tags: [Python, Complex Systems]
 ---
 ## Netdimes project
 
-We want to look at the growth of Autnomous Server (AS) networks found in the
+We want to look at the growth of Autonomous Server (AS) networks found in the
 [netdimes project](http://www.netdimes.org/new/?q=node/65) to see how a network
 grows over time.
 In particular, we are looking at nodes in the year 2011.

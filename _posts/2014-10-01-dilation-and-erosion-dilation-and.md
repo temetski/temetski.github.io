@@ -12,7 +12,7 @@ blogger_orig_url: https://damiandailisan.blogspot.com/2014/10/dilation-and-erosi
 
 ## Dilation and Erosion
 
-Dilation and erosion was performed by hand on a graphing paper. The initial shapes and structuring elements are outlined in red, while the results are outlined in blue. In the structuring element, we first choos a pixel to use as the "origin". We reflect the image about this origin.  
+Dilation and erosion was performed by hand on a graphing paper. The initial shapes and structuring elements are outlined in red, while the results are outlined in blue. In the structuring element, we first chose a pixel to use as the "origin". We reflect the image about this origin.  
 
 For Dilation, we move the element around the shape, such that the origin remains in the shape. The combined outlines of the structuring element as it moves through the shape is the Dilation.  
 
@@ -39,7 +39,7 @@ In general, we can say that Dilation makes the shape bigger, while Erosion makes
 *Erosion*
 {: refdef}
 
-I performed Dilation and Erotion in Scilab using the IPD toolbox.
+I performed Dilation and Erosion in Scilab using the IPD toolbox.
 The results I obtained were consistent with my hand drawn Dilations and Erosions.  
 
 ## Cancer Cell Detection

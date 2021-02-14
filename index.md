@@ -7,7 +7,7 @@ may: "[May Lim](http://cxteam.liknayan.com/people/mlim)"
 
 Hi, I am a PhD Physics student at the National Institute of Physics, University of the Philippines.
 I am also a Research Fellow for the Philippine California Advanced Research Institutes: Data Analytics for Research and Education (PCARI:DARE) project.
-My research interests include traffic modeling and data science.
+My research interests include computational modeling and data science.
 
 ---
 

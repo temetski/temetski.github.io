@@ -3,11 +3,13 @@ layout: page
 description: "showaboutdescription"
 header-img: "img/home-bg.jpg"
 may: "[May Lim](http://cxteam.liknayan.com/people/mlim)"
+coss: "[Computational Social Science](https://coss.ethz.ch/)"
 ---
 
-Hi, I am a PhD Physics student at the National Institute of Physics, University of the Philippines.
-I am also a Research Fellow for the Philippine California Advanced Research Institutes: Data Analytics for Research and Education (PCARI:DARE) project.
-My research interests include computational modeling and data science.
+I am currently a postdoctoral researcher in {{ page.coss }} chair at ETH Zurich.
+Previously, I also worked as a data scientist at the Analytics, Computing, and Complex Systems lab (ACCeSs@AIM).
+In 2021, I received a Ph.D. in Physics from the University of the Philippines, where my research focused on using computational simulations to study driving behavior in traffic models, and machine learning applications for traffic-related research.
+My current research interests lie in the intersection of machine learning and artificial intelligence applied to multi-agent systems, including (but not limited to) traffic and transportation.
 
 ---
 

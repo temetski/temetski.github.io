@@ -2,6 +2,8 @@
 layout: post
 title: "Earthquake Networks"
 tags: [Python, Complex Systems]
+toc: 
+    sidebar: true
 ---
 ## Earthquake Data
 

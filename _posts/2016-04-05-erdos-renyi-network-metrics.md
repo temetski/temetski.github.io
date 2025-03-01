@@ -2,6 +2,8 @@
 layout: post
 title: "Erdos-Renyi Network Metrics"
 tags: [Python, Complex Systems]
+toc: 
+    sidebar: true
 ---
 The Erdos Renyi networks consist of nodes that have a probability $p$ to be
 connected to other nodes. This is otherwise known as a random network, and its
@@ -9,11 +11,11 @@ statistical properties and characteristics are well studied. In this entry, we
 will be looking at the following:
 
 ## Table of Contents
-1. [Creating an Adjacency Matrix](#Creating-an-Adjacency-Matrix)
-3. [Average Degree](#Average-Degree)
-1. [Average Clustering Coefficient](#Average-Clustering-Coefficient)
-2. [Average Shortest Path Length](#Average-Shortest-Path-Length)
-1. [References](#References)
+1. [Creating an Adjacency Matrix](#creating-an-adjacency-matrix)
+2. [Average Degree](#average-degree)
+3. [Average Clustering Coefficient](#average-clustering-coefficient)
+4. [Average Shortest Path Length](#average-shortest-path-length)
+5. [References](#references)
 
 
 

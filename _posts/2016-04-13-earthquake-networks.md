@@ -7,9 +7,9 @@ tags: [Python, Complex Systems]
 
 I got the earthquake data from
 [Phivolcs](http://www.phivolcs.dost.gov.ph/html/update_SOEPD/EQLatest.html)
-website for eathquake that occured between March 1-9, 2016. The data was saved
+website for earthquake that occured between March 1-9, 2016. The data was saved
 to a `csv` file to be processed by `python`.
-As is, the data did not neet that much cleaning. I also used `pandas` to manage
+As is, the data did not need that much cleaning. I also used `pandas` to manage
 the data.
 
 **In [2]:**

@@ -62,7 +62,7 @@ subplotaxis_off(ax)
 {% endhighlight %}
 
 
-![svg]({{ BASE_PATH }}/img/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_1_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_1_0.svg)
 
 
 In the above examples, we observe stable equilibrium ($r=1.8$), and stable
@@ -97,7 +97,7 @@ subplotaxis_off(ax)
 {% endhighlight %}
 
 
-![svg]({{ BASE_PATH }}/img/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_3_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_3_0.svg)
 
 
 The behavior seen above heavily depends on the initial seed value of $N_0$, and
@@ -159,4 +159,4 @@ subplotaxis_off(ax)
 {% endhighlight %}
 
 
-![svg]({{ BASE_PATH }}/img/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_6_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/chaos-in-biological-populations_files/chaos-in-biological-populations_6_0.svg)

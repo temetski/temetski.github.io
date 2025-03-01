@@ -75,7 +75,7 @@ with sns.axes_style('white'):
 {% endhighlight %}
 
 
-![svg]({{ BASE_PATH }}/img/posts/elementary-cellular-automata_files/elementary-cellular-automata_5_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/elementary-cellular-automata_files/elementary-cellular-automata_5_0.svg)
 
 
 # Characterizing ECA Rules
@@ -198,7 +198,7 @@ plt.xlabel('$K$')
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/elementary-cellular-automata_files/elementary-cellular-automata_14_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/elementary-cellular-automata_files/elementary-cellular-automata_14_1.svg)
 
 
 ### Clustering of ECA

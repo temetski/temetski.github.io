@@ -78,7 +78,7 @@ ax.set_ylabel("Frequency")
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_4_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_4_1.svg)
 
 
 **In [3]:**
@@ -109,7 +109,7 @@ print(r'$\langle k \rangle = %s $' % slope, ", p=", p_value)
     
 
 
-![svg]({{ BASE_PATH }}/img/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_6_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_6_1.svg)
 
 
 ## Average Clustering Coefficient
@@ -162,7 +162,7 @@ print(r'$p = %s $' % intercept, ", p=", p_value)
     
 
 
-![svg]({{ BASE_PATH }}/img/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_9_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_9_1.svg)
 
 
 Note: obtaining the clustering coefficient can be really slow, with the naive
@@ -204,7 +204,7 @@ print(r'$<l> = %s $' % slope, ", p=", p_value)
     
 
 
-![svg]({{ BASE_PATH }}/img/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_12_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_12_1.svg)
 
 
 It's clear form the figure that there is an exponential relationship between
@@ -253,7 +253,7 @@ ax.set_ylabel(r"$\langle l \rangle$")
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_15_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/erdos-renyi-network-metrics_files/erdos-renyi-network-metrics_15_1.svg)
 
 
 The obtained result isn't quite what we are expecting.  However, it should be

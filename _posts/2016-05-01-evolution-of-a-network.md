@@ -59,7 +59,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_3_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_3_1.svg)
 
 
 So it appears as if the size of the AS network id more or less decreasing
@@ -104,7 +104,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_6_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_6_1.svg)
 
 
 We can zoom in at the middle part:
@@ -120,7 +120,7 @@ fig
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_8_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_8_0.svg)
 
 
 
@@ -168,7 +168,7 @@ plt.legend()
 
 
 
-![jpeg]({{ BASE_PATH }}/img/posts/evolution-of-a-network_files/evolution-of-a-network_11_1.jpe)
+![jpeg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_11_1.jpe)
 
 
 Once again, there is a decreasing trend. Since this is a CCDF, we can say that

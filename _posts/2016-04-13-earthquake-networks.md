@@ -125,7 +125,7 @@ plt.show()
 {% endhighlight %}
 
 
-![svg]({{ BASE_PATH }}/img/posts/earthquake-networks_files/earthquake-networks_6_0.svg)
+![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_6_0.svg)
 
 
 Connections in this network are directed. The directionality of links actually
@@ -175,12 +175,9 @@ plt.legend()
 
 
 
-
-![svg]({{ BASE_PATH }}/img/posts/earthquake-networks_files/earthquake-networks_9_1.svg)
-
+![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_9_1.svg)
 
 Unfortunately the dataset only contained 69 earthquakes, which is too small to
-pull of a distribution. The degrees themselves fall within a lange of less than
 one order of magnitude.
 
 At first glance, it appears that there are more high out-degree nodes than in-
@@ -229,7 +226,7 @@ plt.legend()
 
 
 
-![svg]({{ BASE_PATH }}/img/posts/earthquake-networks_files/earthquake-networks_12_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_12_1.svg)
 
 
 At first glance, we cannot characterize the distribution that results as a power
@@ -269,7 +266,7 @@ plt.legend(loc='best')
     
 
 
-![svg]({{ BASE_PATH }}/img/posts/earthquake-networks_files/earthquake-networks_15_1.svg)
+![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_15_1.svg)
 
 
 The clustering coefficient distribution has a sharp increase at the center,

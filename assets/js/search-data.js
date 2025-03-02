@@ -140,6 +140,17 @@ ninja.data = [{
           window.location.href = "/blog/2014/dilation-and-erosion-dilation-and/";
         
       },
+    },{id: "post-image-segmentation",
+      
+        title: "Image Segmentation",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2014/image-segmentation/";
+        
+      },
     },{id: "post-length-and-area-estimation",
       
         title: "Length and Area Estimation",

@@ -21,7 +21,7 @@ Then we took a set of images which corresponds to one projectile motion.
 
 We select the ROI by color, just crop the pingpong ball. And then use
 Image segmentation using [histogram back
-projection](image-segmentation.html).
+projection]({{ site.baseurl }}{% post_url 2014-09-23-image-segmentation %}).
 
 ![](http://2.bp.blogspot.com/-712CpDx7Hns/VFg19AFXHbI/AAAAAAAAAXE/DvmFW3yeizE/s1600/back.jpg)
 

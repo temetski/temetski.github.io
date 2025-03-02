@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am joining the [Computational Social Science](https://coss.ethz.ch/) group at ETH Zürich! :tada: 
+I am joining the [Computational Social Science](https://coss.ethz.ch/) group at ETH Zürich! :tada:

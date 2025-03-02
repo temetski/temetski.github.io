@@ -2,9 +2,10 @@
 layout: post
 title: "Earthquake Networks"
 tags: [Python, Complex Systems]
-toc: 
-    sidebar: true
+toc:
+  sidebar: true
 ---
+
 ## Earthquake Data
 
 I got the earthquake data from
@@ -17,7 +18,7 @@ the data.
 **In [2]:**
 
 {% highlight python %}
-from __future__ import division, print_function
+from **future** import division, print_function
 import numpy as np
 import networkx as nx
 import pandas as pd
@@ -40,33 +41,31 @@ follows:
 
 {% highlight python %}
 def haversine(loc1, loc2):
-    """
-    Calculate the great circle distance between two points 
-    on the earth (specified in decimal degrees)
-    """
-    lon1, lat1 = loc1['Longitude'], loc1['Latitude']
-    lon2, lat2 = loc2['Longitude'], loc2['Latitude']
-    # convert decimal degrees to radians 
-    lon1, lat1, lon2, lat2 = np.radians([lon1, lat1, lon2, lat2])
-    # haversine formula 
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
-    a = np.sin(dlat/2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2)**2
-    c = 2 * np.arcsin(np.sqrt(a)) 
-    km = 6367 * c
-    return km
+"""
+Calculate the great circle distance between two points
+on the earth (specified in decimal degrees)
+"""
+lon1, lat1 = loc1['Longitude'], loc1['Latitude']
+lon2, lat2 = loc2['Longitude'], loc2['Latitude'] # convert decimal degrees to radians
+lon1, lat1, lon2, lat2 = np.radians([lon1, lat1, lon2, lat2]) # haversine formula
+dlon = lon2 - lon1
+dlat = lat2 - lat1
+a = np.sin(dlat/2)**2 + np.cos(lat1) _ np.cos(lat2) _ np.sin(dlon/2)**2
+c = 2 _ np.arcsin(np.sqrt(a))
+km = 6367 _ c
+return km
 {% endhighlight %}
 
 ## Network construction
 
 We will construct the earthquake network using locations of the earthquakes as
 nodes.
-The edges between the nodes will depend on the *Nearest record breaking*
+The edges between the nodes will depend on the _Nearest record breaking_
 criterion which has the following rules:
 
 1. Two earthquakes $i$ and $j$ are connected if the occur consecutively in time.
 2. An earthquake $k$ is connected to past earthquakes $i$ if the new earthquake
-breaks the record $R_{ij}$ of previous earthquake pairs.
+   breaks the record $R_{ij}$ of previous earthquake pairs.
 
 An earthquake record of a earthquake $i$ is the current shortest distance
 between all other earthquake $j$. Thus a new earthquake $k$ is connected to an
@@ -91,14 +90,14 @@ nx.set_node_attributes(G, 'datetime', earthquake_df['Datetime'].tolist())
 nx.set_node_attributes(G, 'record', 1e10)
 
 for i in range(1,len(earthquake_df['Datetime'])):
-    distance = haversine(loc.iloc[i], loc.iloc[i-1])
-    G.add_edge(i-1,i, {'distance':distance})
-    G.node[i-1]['record'] = distance
-    for j in range(i):
-        node_dist = haversine(loc.iloc[i], loc.iloc[j])
-        if node_dist < G.node[j]['record']:
-            G.node[j]['record'] = node_dist
-            G.add_edge(j,i, {'distance':node_dist})
+distance = haversine(loc.iloc[i], loc.iloc[i-1])
+G.add_edge(i-1,i, {'distance':distance})
+G.node[i-1]['record'] = distance
+for j in range(i):
+node_dist = haversine(loc.iloc[i], loc.iloc[j])
+if node_dist < G.node[j]['record']:
+G.node[j]['record'] = node_dist
+G.add_edge(j,i, {'distance':node_dist})
 {% endhighlight %}
 
 **In [5]:**
@@ -110,15 +109,17 @@ from mpl_toolkits.basemap import Basemap
 fig = plt.figure(figsize=(10,10))
 ax = fig.add_subplot(111)
 m = Basemap(projection='merc',llcrnrlat=3,urcrnrlat=20, resolution='i',
-            llcrnrlon=117,urcrnrlon=128, lat_ts=0, ellps='WGS84')
+llcrnrlon=117,urcrnrlon=128, lat_ts=0, ellps='WGS84')
 m.drawcountries(zorder=0)
 m.fillcontinents(color='#555555')
 m.drawmapboundary(fill_color='#111111')
+
 # positions = {i:tuple(loc.iloc[i].values) for i in nodes}
-positions = {i:m(*loc.iloc[i].values) for i in nodes}
+
+positions = {i:m(\*loc.iloc[i].values) for i in nodes}
 
 s = nx.draw_networkx_nodes(G, ax=ax, pos=positions, node_color=np.array(magnitude),
-                     alpha=0.7, cmap='YlOrRd', with_labels=False)
+alpha=0.7, cmap='YlOrRd', with_labels=False)
 s.set_zorder(3)
 edges = nx.draw_networkx_edges(G, ax=ax, pos=positions, edge_color="#aaaaaa", arrows=True)
 edges.set_zorder(2)
@@ -126,9 +127,7 @@ edges.set_zorder(2)
 plt.show()
 {% endhighlight %}
 
-
 ![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_6_0.svg)
-
 
 Connections in this network are directed. The directionality of links actually
 implies some possible causal relation, hence, the directionality also tells us
@@ -150,7 +149,7 @@ out_deg = np.sort(G.out_degree().values())
 in_deg = np.sort(G.in_degree().values())
 
 def degree_distribution(degree):
-    
+
     frequency = np.arange(len(degree))/float(len(degree))
     ecdf = ECDF(degree)
 
@@ -158,8 +157,11 @@ def degree_distribution(degree):
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-#     ax.scatter(degree, 1-frequency)
+
+# ax.scatter(degree, 1-frequency)
+
 # ax.step(ecdf.x, 1-ecdf.y)
+
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("Degree")
@@ -170,12 +172,7 @@ plt.legend()
 
 {% endhighlight %}
 
-
-
-
     <matplotlib.legend.Legend at 0xa258a20>
-
-
 
 ![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_9_1.svg)
 
@@ -220,16 +217,9 @@ ax.step(ecdf.x, 1-ecdf.y, color='r')
 plt.legend()
 {% endhighlight %}
 
-
-
-
     <matplotlib.legend.Legend at 0x8a4feb8>
 
-
-
-
 ![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_12_1.svg)
-
 
 At first glance, we cannot characterize the distribution that results as a power
 law. the low slope at low magnitudes means that there are only a few low
@@ -244,7 +234,6 @@ distribution of data.
 
 ## Clustering coefficient distribution
 
-
 **In [12]:**
 
 {% highlight python %}
@@ -254,8 +243,11 @@ ecdf_clust = ECDF(cluster)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
+
 # ax.set_xscale('log')
+
 # ax.set_yscale('log')
+
 ax.set_xlabel("Clustering coefficient")
 ax.set_ylabel("CDF")
 ax.step(ecdf_clust.x, ecdf_clust.y, color='r')
@@ -265,11 +257,8 @@ plt.legend(loc='best')
 
     E:\Applications\Anaconda\lib\site-packages\matplotlib\axes\_axes.py:519: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
       warnings.warn("No labelled objects found. "
-    
-
 
 ![svg]({{ BASE_PATH }}/assets/posts/earthquake-networks_files/earthquake-networks_15_1.svg)
-
 
 The clustering coefficient distribution has a sharp increase at the center,
 flattening out at the extreme values.

@@ -3,6 +3,7 @@ layout: post
 title: "Evolution of a network"
 tags: [Python, Complex Systems]
 ---
+
 ## Netdimes project
 
 We want to look at the growth of Autonomous Server (AS) networks found in the
@@ -41,7 +42,7 @@ Note that this time period is just one year.
 
 {% highlight python %}
 size_nodes = [len(pd.read_csv('ASNodes%s_2011.csv.gz'%i, header=None)) for i in range(1,11)]
-    
+
 fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.set_xlabel("2011")
@@ -51,16 +52,9 @@ ax.set_xticklabels(month[:10])
 plt.legend()
 {% endhighlight %}
 
-
-
-
     <matplotlib.legend.Legend at 0xd21c518>
 
-
-
-
 ![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_3_1.svg)
-
 
 So it appears as if the size of the AS network id more or less decreasing
 throughout the year.
@@ -80,14 +74,14 @@ We will do this first for one month of the dataset:
 fig = plt.figure()
 ax = fig.add_subplot(111)
 for i in range(10):
-    edgelist = pd.read_csv('ASEdges%s_2011.csv.gz'%(i+1), header=None)
-    nodelist = pd.read_csv('ASNodes%s_2011.csv.gz'%(i+1), header=None)
-    g = nx.Graph()
-    g.add_nodes_from(nodelist[0])
-    g.add_edges_from(tuple(zip(edgelist[0].values, edgelist[1].values)))
-    degree = nx.degree(g).values()
-    ecdf_deg = ECDF(degree)
-    ax.step(ecdf_deg.x, 1-ecdf_deg.y, label=month[i], color=color[i])
+edgelist = pd.read_csv('ASEdges%s_2011.csv.gz'%(i+1), header=None)
+nodelist = pd.read_csv('ASNodes%s_2011.csv.gz'%(i+1), header=None)
+g = nx.Graph()
+g.add_nodes_from(nodelist[0])
+g.add_edges_from(tuple(zip(edgelist[0].values, edgelist[1].values)))
+degree = nx.degree(g).values()
+ecdf_deg = ECDF(degree)
+ax.step(ecdf_deg.x, 1-ecdf_deg.y, label=month[i], color=color[i])
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("Degree")
@@ -96,16 +90,9 @@ plt.legend()
 
 {% endhighlight %}
 
-
-
-
     <matplotlib.legend.Legend at 0x1209d7f0>
 
-
-
-
 ![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_6_1.svg)
-
 
 We can zoom in at the middle part:
 
@@ -117,12 +104,7 @@ ax.set_ylim(1e-3, 0.1)
 fig
 {% endhighlight %}
 
-
-
-
 ![svg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_8_0.svg)
-
-
 
 The graphs show that there is a general shift towards the lower left part of the
 curve as the months go by.
@@ -145,14 +127,14 @@ interconnected nodes are as the year progresses.
 fig = plt.figure()
 ax = fig.add_subplot(111)
 for i in range(10):
-    edgelist = pd.read_csv('ASEdges%s_2011.csv.gz'%(i+1), header=None)
-    nodelist = pd.read_csv('ASNodes%s_2011.csv.gz'%(i+1), header=None)
-    g = nx.Graph()
-    g.add_nodes_from(nodelist[0])
-    g.add_edges_from(tuple(zip(edgelist[0].values, edgelist[1].values)))
-    cluster = nx.clustering(g).values()
-    ecdf_clust = ECDF(cluster)
-    ax.step(ecdf_clust.x, 1-ecdf_clust.y, label=month[i], color=color[i])
+edgelist = pd.read_csv('ASEdges%s_2011.csv.gz'%(i+1), header=None)
+nodelist = pd.read_csv('ASNodes%s_2011.csv.gz'%(i+1), header=None)
+g = nx.Graph()
+g.add_nodes_from(nodelist[0])
+g.add_edges_from(tuple(zip(edgelist[0].values, edgelist[1].values)))
+cluster = nx.clustering(g).values()
+ecdf_clust = ECDF(cluster)
+ax.step(ecdf_clust.x, 1-ecdf_clust.y, label=month[i], color=color[i])
 ax.set_xlabel("Clustering Coefficient")
 ax.set_ylabel("CCDF")
 ax.set_ylim(0.1,1)
@@ -160,16 +142,9 @@ plt.legend()
 
 {% endhighlight %}
 
-
-
-
     <matplotlib.legend.Legend at 0xa7c1748>
 
-
-
-
 ![jpeg]({{ BASE_PATH }}/assets/posts/evolution-of-a-network_files/evolution-of-a-network_11_1.jpe)
-
 
 Once again, there is a decreasing trend. Since this is a CCDF, we can say that
 there are a lot more nodes with low clustering coefficients although nodes are

@@ -3,6 +3,7 @@ layout: post
 title: "Agent Based Models"
 tags: [Python, Complex Systems]
 ---
+
 ## Schelling model
 
     This work was made together with Alfred Abella
@@ -21,7 +22,7 @@ A cell may be `EMPTY` or occupied. When occupied, it can take on two values,
 **In [1]:**
 
 {% highlight python %}
-from __future__ import division
+from **future** import division
 import numpy as np
 import matplotlib.pyplot as plt
 from numba import jit
@@ -37,8 +38,8 @@ percent_white = 33.3
 percent_thres = 50
 n2 = n**2
 grids = np.zeros((n,n))
-emp = int((percent_empty / 100) * n**2)
-two = int((percent_white / 100) * n**2)
+emp = int((percent_empty / 100) \* n**2)
+two = int((percent_white / 100) \* n\*\*2)
 tot = emp + two
 rand_loc=np.random.permutation(n2)
 init_emp=np.unravel_index(rand_loc[:emp+1], (n,n))
@@ -63,21 +64,21 @@ and stop moving. The rules stated are contained and executed within the function
 
 {% highlight python %}
 def place_indiv(grid2):
-    num_unsat = [0,0]
-    for i,j in [(i,j) for i in np.arange(1,n+1) for j in np.arange(1,n+1)]:
-        value = grid2[i,j]
-        if value != EMPTY:
-            block = grid2[i - 1:i + 2,j - 1:j + 2]
-            cnzero = np.sum(block != 0)
-            cnvalue = np.sum(block == value)
-            thres = round((percent_thres / 100) * cnzero)
-            if cnvalue < thres:
-                if value == BLACK:
-                    num_unsat[0] += 1
-                elif value == WHITE:
-                    num_unsat[1] +=1
-                grid2[i,j] = EMPTY
-    return grid2, num_unsat
+num_unsat = [0,0]
+for i,j in [(i,j) for i in np.arange(1,n+1) for j in np.arange(1,n+1)]:
+value = grid2[i,j]
+if value != EMPTY:
+block = grid2[i - 1:i + 2,j - 1:j + 2]
+cnzero = np.sum(block != 0)
+cnvalue = np.sum(block == value)
+thres = round((percent_thres / 100) \* cnzero)
+if cnvalue < thres:
+if value == BLACK:
+num_unsat[0] += 1
+elif value == WHITE:
+num_unsat[1] +=1
+grid2[i,j] = EMPTY
+return grid2, num_unsat
 {% endhighlight %}
 
 We will run this code for all agents at every timestep until all agents settle
@@ -91,7 +92,7 @@ lot of timesteps before all agents settle down.
 FFMpegWriter = animation.writers['ffmpeg']
 writer = FFMpegWriter(fps=30, extra_args=['-vcodec', 'libx264'])
 
-fig =  plt.figure()
+fig = plt.figure()
 ax = fig.add_subplot(111)
 fig.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=None, hspace=None)
 ax.axis('off')
@@ -99,15 +100,16 @@ cmap = plt.get_cmap('bone', 3)
 im = ax.imshow(grids, cmap=cmap, interpolation='nearest')
 count=0
 with writer.saving(fig, "writer_test.mp4", 64):
-    while True:
-        grid2, num_unsat = place_indiv(grid2)
-        empty_y, empty_x = np.where(grid2 == EMPTY)
-        perm = np.random.permutation(len(empty_y)) # perm determines which empty cells are filled
-        grid2[empty_y[perm[:num_unsat[0] ] ], empty_x[perm[:num_unsat[0] ] ] ] = BLACK
-        grid2[empty_y[perm[num_unsat[0]:sum(num_unsat)] ], empty_x[perm[num_unsat[0]:sum(num_unsat)] ] ] = WHITE
-        count += 1
-        if np.sum(grids!=grid2[1:-1,1:- 1])==0 or count>=1000:
-#             print count
+while True:
+grid2, num_unsat = place_indiv(grid2)
+empty_y, empty_x = np.where(grid2 == EMPTY)
+perm = np.random.permutation(len(empty_y)) # perm determines which empty cells are filled
+grid2[empty_y[perm[:num_unsat[0] ] ], empty_x[perm[:num_unsat[0] ] ] ] = BLACK
+grid2[empty_y[perm[num_unsat[0]:sum(num_unsat)] ], empty_x[perm[num_unsat[0]:sum(num_unsat)] ] ] = WHITE
+count += 1
+if np.sum(grids!=grid2[1:-1,1:- 1])==0 or count>=1000:
+
+# print count
 
             break
         else:
@@ -115,6 +117,7 @@ with writer.saving(fig, "writer_test.mp4", 64):
             if count%3==0:
                 im.set_data(grids)
                 writer.grab_frame()
+
 {% endhighlight %}
 
 The video below shows the evolution of the Schelling model through time. We can

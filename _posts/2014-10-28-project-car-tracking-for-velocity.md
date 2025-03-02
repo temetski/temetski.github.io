@@ -1,8 +1,8 @@
---- 
+---
 layout: post
-title: 'Project: Car Tracking for velocity measurement'
+title: "Project: Car Tracking for velocity measurement"
 tags: [Python, Image Processing]
-time: '2014-11-17T23:23:04.745-08:00'
+time: "2014-11-17T23:23:04.745-08:00"
 ---
 
 For my project, I want to try tracking cars in a video to determine velocities of vehicle on the road.
@@ -39,7 +39,6 @@ y = [y Centroid(2)];
 x = [x Centroid(1)];
 {% endhighlight %}
 
-
 Doing this for the rest of the images, we will get a collection of x and y positions, which we can plot using excel.
 Of course, these x and y positions need to be scaled properly, using
 
@@ -49,7 +48,6 @@ xscale = .05/14 // meters to pixels
 Y = -yscale*(y-240);
 X = xscale*(x);
 {% endhighlight %}
-
 
 If we fit a second order polynomial to the y positions and time, we
 should get
@@ -66,7 +64,6 @@ The method of image segmentation is good, but we need something more robust if w
 processing.
 A possible alternative method is using image difference.
 We need an image of just the background.
-
 
 ![](http://4.bp.blogspot.com/-OgHTmJvfy7M/VFg7v5kP7oI/AAAAAAAAAXk/smnZ2krxTJ8/s1600/bg.jpg)
 
@@ -92,12 +89,11 @@ videos.
 A video frame would look like the image shown above.
 Since we are working with a video captured by a different person, we do not have a background that we can readily use as a reference.
 Instead, we utilize the difference of subsequent frames, and hope to find the outlines of the vehicles on the road.
-However, as shown in the next two figures, this is not as straightforward as the previous methodology of subtracting a reference background. 
+However, as shown in the next two figures, this is not as straightforward as the previous methodology of subtracting a reference background.
 
 ![](http://2.bp.blogspot.com/-tcvLrTyL9sU/VGq-6Az9ewI/AAAAAAAAAX8/CHPBWn1oD6s/s1600/diff.jpg)
 
 ![](http://3.bp.blogspot.com/-1kz2FFv-Vn4/VGq-7oOHZuI/AAAAAAAAAYU/HZjj5vt3GC0/s1600/imdiff.png)
-
 
 ![tracks](http://2.bp.blogspot.com/-2nE8WvBfkb4/VGq-8QTDe6I/AAAAAAAAAYc/4xYRBU4GlhI/s1600/std.jpg)
 

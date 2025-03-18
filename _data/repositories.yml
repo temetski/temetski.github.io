@@ -6,4 +6,3 @@ repo_description_lines_max: 2
 github_repos:
   - ethz-coss/voting_traffic
   - ethz-coss/calm_rl
-

@@ -26,7 +26,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
-may: "[May Lim](http://cxteam.liknayan.com/people/mlim)"
+may: "[May Lim](https://scholar.google.com.ph/citations?user=UvxZT-IAAAAJ)"
 coss: "[Computational Social Science](https://coss.ethz.ch/)"
 ---
 

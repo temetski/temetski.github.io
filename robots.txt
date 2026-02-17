@@ -1,6 +1,14 @@
 ---
 permalink: /robots.txt
 ---
+User-agent: Googlebot
+Allow: /assets/pdf/
+Disallow:
+
+User-agent: Googlebot-Image
+Allow: /assets/pdf/
+Disallow:
+
 User-agent: *
 Disallow:
 
